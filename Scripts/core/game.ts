@@ -118,7 +118,7 @@ function init() {
 	//scene.add(cube1);
 
     
-    	cubeGeometry2 = new CubeGeometry(0.3,1,0.3);
+    	cubeGeometry2 = new CubeGeometry(0.6,2,0.6);
 	 cubeMaterial2 = new LambertMaterial({color:0x00ff00, opacity:0.5});
 	cube2 = new Mesh(cubeGeometry2, cubeMaterial2);
 	cube2.castShadow = true;
