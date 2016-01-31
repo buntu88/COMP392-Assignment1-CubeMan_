@@ -64,6 +64,15 @@ var cubeMaterial6:LambertMaterial;
 var cube7: Mesh;
 var cubeGeometry7:CubeGeometry;
 var cubeMaterial7:LambertMaterial;
+var cube8: Mesh;
+var cubeGeometry8:CubeGeometry;
+var cubeMaterial8:LambertMaterial;
+var cube9: Mesh;
+var cubeGeometry9:CubeGeometry;
+var cubeMaterial9:LambertMaterial;
+var cube10: Mesh;
+var cubeGeometry10:CubeGeometry;
+var cubeMaterial10:LambertMaterial;
 var xyz = new Object3D;
 
 function init() {
@@ -91,124 +100,108 @@ function init() {
     console.log("Added Plane Primitive to scene...");
     
     // //Add a Cube to the Scene
-    // cubeMaterial = new LambertMaterial({color:0x00ff00});
-    // cubeGeometry = new CubeGeometry(2, 2, 2);
-    // cube = new Mesh(cubeGeometry, cubeMaterial);
-    // cube.castShadow = true;
-    // cube.receiveShadow = true;
-    //     cube.position.x = 0.5;
-    //  cube.position.y = 1;
-    //   cube.position.z = 0;
 
-    
-    // scene.add(cube);
-    // console.log("Added Cube Primitive to scene...");
-    
-    // var xyz = new Object3D();
-    cubeGeometry1 = new CubeGeometry(0.6,2,0.6);
-	cubeMaterial1 = new LambertMaterial({color:0x00ff00, opacity:0.5});
+    cubeGeometry1 = new CubeGeometry(0.6,0.3,1.2);
+	cubeMaterial1 = new LambertMaterial({color:0x00ff00, opacity:1});
 	cube1 = new Mesh(cubeGeometry1, cubeMaterial1);
 	cube1.castShadow = true;
     cube1.position.x = 0.5;
-    cube1.position.y = 1;
-    cube1.position.z = 0;
-
+    cube1.position.y = 0.15;
+    cube1.position.z = 0.3;
 	xyz.add(cube1);
 
-	//scene.add(cube1);
 
-    
-    	cubeGeometry2 = new CubeGeometry(0.6,2,0.6);
-	 cubeMaterial2 = new LambertMaterial({color:0x00ff00, opacity:0.5});
+    cubeGeometry2 = new CubeGeometry(0.6,0.3,1.2);
+	cubeMaterial2 = new LambertMaterial({color:0x00ff00, opacity:1});
 	cube2 = new Mesh(cubeGeometry2, cubeMaterial2);
 	cube2.castShadow = true;
     cube2.position.x = -0.5;
-     cube2.position.y = 1;
-      cube2.position.z = 0;
- 
+    cube2.position.y = 0.15;
+    cube2.position.z = 0.3;
 	xyz.add(cube2);
- 
-	//scene.add(cube2);
- 
+
     
-	console.log("Added Cube Primative to scene...");
-    
-	
-    // //Add a Cube to the Scene
-	cubeGeometry3 = new CubeGeometry(2, 2, 2);
-	 cubeMaterial3 = new LambertMaterial({color:0x00ff00, opacity:0.5});
-	cube3= new Mesh(cubeGeometry3, cubeMaterial3);
+    cubeGeometry3 = new CubeGeometry(0.6,2,0.6);
+	cubeMaterial3 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube3 = new Mesh(cubeGeometry3, cubeMaterial3);
 	cube3.castShadow = true;
-        cube3.position.x = 0;
-     cube3.position.y = 3;
-      cube3.position.z = 0;
- 
+    cube3.position.x = 0.5;
+    cube3.position.y = 1.3;
+    cube3.position.z = 0;
 	xyz.add(cube3);
- 
-	//scene.add(cube3);
- 
-	console.log("Added Cube Primative to scene...");
-    
-    // //Add a Cube to the Scene
-	cubeGeometry4 = new CubeGeometry(0.6, 0.6, 0.6);
-	 cubeMaterial4 = new LambertMaterial({color:0x00ff00, opacity:0.5});
-	cube4= new Mesh(cubeGeometry4, cubeMaterial4);
+
+
+    cubeGeometry4 = new CubeGeometry(0.6,2,0.6);
+	cubeMaterial4 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube4 = new Mesh(cubeGeometry4, cubeMaterial4);
 	cube4.castShadow = true;
-        cube4.position.x = 0;
-     cube4.position.y = 4.3;
-      cube4.position.z = 0;
- 
-	xyz.add(cube4);
- 
-	//scene.add(cube4);
- 
-	console.log("Added Cube Primative to scene...");
+    cube4.position.x = -0.5;
+    cube4.position.y = 1.3;
+    cube4.position.z = 0;
+	xyz.add(cube4);    
     
-        // //Add a Cube to the Scene
-	cubeGeometry5 = new CubeGeometry(1.2, 1.2, 1.2);
-	 cubeMaterial5 = new LambertMaterial({color:0x00ff00, opacity:0.5});
-	cube5= new Mesh(cubeGeometry5, cubeMaterial5);
+    cubeGeometry5 = new CubeGeometry(2,0.3,1.2);
+	cubeMaterial5 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube5 = new Mesh(cubeGeometry5, cubeMaterial5);
 	cube5.castShadow = true;
-        cube5.position.x = 0;
-     cube5.position.y = 5.1;
-      cube5.position.z = 0;
- 
-	xyz.add(cube5);
- 
-	//scene.add(cube5);
- 
-	console.log("Added Cube Primative to scene...");
+    cube5.position.x = 0;
+    cube5.position.y = 2.45;
+    cube5.position.z = 0.3;
+	xyz.add(cube5);    
     
-            // //Add a Cube to the Scene
-	cubeGeometry6 = new CubeGeometry(1.2, 0.4, 0.4);
-	 cubeMaterial6 = new LambertMaterial({color:0x00ff00, opacity:0.5});
-	cube6= new Mesh(cubeGeometry6, cubeMaterial6);
+    
+    cubeGeometry6 = new CubeGeometry(2,2,1.2);
+	cubeMaterial6 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube6 = new Mesh(cubeGeometry6, cubeMaterial6);
 	cube6.castShadow = true;
-        cube6.position.x = 1.6;
-     cube6.position.y = 3.5;
-      cube6.position.z = 0;
- 
-	xyz.add(cube6);
- 
-	//scene.add(cube6);
- 
-	console.log("Added Cube Primative to scene...");
-            
-            // //Add a Cube to the Scene
-	cubeGeometry7 = new CubeGeometry(1.2, 0.4, 0.4);
-	 cubeMaterial7 = new LambertMaterial({color:0x00ff00, opacity:0.5});
-	cube7= new Mesh(cubeGeometry7, cubeMaterial7);
+    cube6.position.x = 0;
+    cube6.position.y = 3.6;
+    cube6.position.z = 0.3;
+	xyz.add(cube6);  
+    
+    
+    cubeGeometry7 = new CubeGeometry(0.4,1.8,0.4);
+	cubeMaterial7 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube7 = new Mesh(cubeGeometry7, cubeMaterial7);
 	cube7.castShadow = true;
-    cube7.position.x = -1.6;
-    cube7.position.y = 3.5;
+    cube7.position.x = 1.2;
+    cube7.position.y = 3.7;
     cube7.position.z = 0;
- 
-	xyz.add(cube7);
-	console.log("Added Cube Primative to scene...");
+	xyz.add(cube7);  
+    
+            
+    cubeGeometry8 = new CubeGeometry(0.4,1.8,0.4);
+	cubeMaterial8 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube8 = new Mesh(cubeGeometry8, cubeMaterial8);
+	cube8.castShadow = true;
+    cube8.position.x = -1.2;
+    cube8.position.y = 3.7;
+    cube8.position.z = 0;
+	xyz.add(cube8);  
+    
+    
+    cubeGeometry9 = new CubeGeometry(0.6,0.6,0.6);
+	cubeMaterial9 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube9 = new Mesh(cubeGeometry9, cubeMaterial9);
+	cube9.castShadow = true;
+    cube9.position.x = 0;
+    cube9.position.y = 4.9;
+    cube9.position.z = 0;
+	xyz.add(cube9); 
+    
+    
+    cubeGeometry10 = new CubeGeometry(1.2,1.2,1.2);
+	cubeMaterial10 = new LambertMaterial({color:0x00ff00, opacity:1});
+	cube10 = new Mesh(cubeGeometry10, cubeMaterial10);
+	cube10.castShadow = true;
+    cube10.position.x = 0;
+    cube10.position.y = 5.8;
+    cube10.position.z = 0.2;
+	xyz.add(cube10); 
+        
+    
     scene.add(xyz);
- 
-	//scene.add(cube7);
-	console.log("Added Cube Primative to scene...");
+ 	console.log("Added Cube Primative to scene...");
 
     // Add an AmbientLight to the scene
     ambientLight = new AmbientLight(0x090909);
