@@ -7,12 +7,14 @@ module objects {
         public rotationSpeedx:number;
         public rotationSpeedy:number;
         public rotationSpeedz:number;
+        public color:number;
         
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++
-        constructor(rotationSpeed:number) {
-           this.rotationSpeedx = rotationSpeed;
-           this.rotationSpeedy = rotationSpeed;
-           this.rotationSpeedz = rotationSpeed;
+        constructor(rotationSpeedx:number, rotationSpeedy:number, rotationSpeedz:number, color:number) {
+           this.rotationSpeedx = rotationSpeedx;
+           this.rotationSpeedy = rotationSpeedy;
+           this.rotationSpeedz = rotationSpeedz;
+           this.color = color;
         }
         
         //PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++

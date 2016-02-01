@@ -206,7 +206,7 @@ function init() {
     console.log("Added an Ambient Light to Scene");
     // Add a SpotLight to the scene
     spotLight = new SpotLight(0xffffff);
-    spotLight.position.set(40, 60, 40);
+    spotLight.position.set(40, 60 - 3, 40);
     //spotLight.rotation.set(-0.71, -1.2,-0.44);
     spotLight.lookAt(new Vector3(0, 5.8 - 3, 0));
     spotLight.castShadow = true;
@@ -214,7 +214,7 @@ function init() {
     console.log("Added a SpotLight Light to Scene");
     // add controls
     gui = new GUI();
-    control = new Control(0.05);
+    control = new Control(0.05, 0.05, 0.05, cubeMaterial1.color.getHex());
     addControl(control);
     // Add framerate stats
     addStatsObject();
@@ -234,7 +234,7 @@ function addControl(controlObject) {
     gui.add(controlObject, 'rotationSpeedx', -0.5, 0.5);
     gui.add(controlObject, 'rotationSpeedy', -0.5, 0.5);
     gui.add(controlObject, 'rotationSpeedz', -0.5, 0.5);
-    //gui.addColor(controlObject, 'color');
+    gui.addColor(controlObject, 'color');
 }
 function addStatsObject() {
     stats = new Stats();
@@ -249,10 +249,11 @@ function gameLoop() {
     stats.update();
     // render using requestAnimationFrame
     requestAnimationFrame(gameLoop);
-    //xyz.material.color = new Color(control.color);
     xyz.rotation.x += control.rotationSpeedx;
     xyz.rotation.y += control.rotationSpeedy;
     xyz.rotation.z += control.rotationSpeedz;
+    cube9.material.color = new Color(control.color);
+    cube10.material.color = new Color(control.color);
     // render the scene
     renderer.render(scene, camera);
 }
