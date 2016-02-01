@@ -270,9 +270,9 @@ function setupRenderer() {
 function setupCamera() {
     camera = new PerspectiveCamera(45, config.Screen.RATIO, 0.1, 1000);
     //camera = new PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.x = 15;
+    camera.position.x = 0;
     camera.position.y = 16 - 3;
-    camera.position.z = 0;
+    camera.position.z = 15;
     //camera.position.z = 17.98061;
     camera.lookAt(new Vector3(0, 0 - 3, 0));
     console.log("Finished setting up Camera...");
