@@ -258,7 +258,7 @@ function init() {
     
     // add controls
     gui = new GUI();
-    control = new Control(0.05,0.05,0.05,cubeMaterial1.color.getHex());
+    control = new Control(0,0,0,cubeMaterial1.color.getHex());
     addControl(control);
 
     // Add framerate stats
