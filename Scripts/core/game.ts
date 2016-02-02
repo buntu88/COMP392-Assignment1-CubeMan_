@@ -258,7 +258,7 @@ function init() {
     
     // add controls
     gui = new GUI();
-    control = new Control(0,0,0,cubeMaterial1.color.getHex());
+    control = new Control(0,0,0,cubeMaterial9.color.getHex(),cubeMaterial7.color.getHex(),cubeMaterial4.color.getHex(), cubeMaterial1.color.getHex(), cubeMaterial13.color.getHex());
     addControl(control);
 
     // Add framerate stats
@@ -283,8 +283,11 @@ function addControl(controlObject: Control): void {
     gui.add(controlObject, 'rotationSpeedx',-0.5,0.5);
     gui.add(controlObject, 'rotationSpeedy',-0.5,0.5);
     gui.add(controlObject, 'rotationSpeedz',-0.5,0.5);
-    gui.addColor(controlObject, 'color');
-    
+    gui.addColor(controlObject, 'skinColor');
+    gui.addColor(controlObject, 'shirtColor');
+    gui.addColor(controlObject, 'pantColor');
+    gui.addColor(controlObject, 'bootColor');
+    gui.addColor(controlObject, 'eyesColor');
 }
 
 function addStatsObject() {
@@ -310,8 +313,19 @@ function gameLoop(): void {
     xyz.rotation.x += control.rotationSpeedx;
     xyz.rotation.y += control.rotationSpeedy;
     xyz.rotation.z += control.rotationSpeedz;
-    cube9.material.color = new Color(control.color);
-    cube10.material.color = new Color(control.color);
+    cube1.material.color = new Color(control.bootColor);
+    cube2.material.color = new Color(control.bootColor);
+    cube3.material.color = new Color(control.pantColor);
+    cube4.material.color = new Color(control.pantColor);
+    cube5.material.color = new Color(control.pantColor);
+    cube6.material.color = new Color(control.shirtColor);
+    cube7.material.color = new Color(control.shirtColor);
+    cube8.material.color = new Color(control.shirtColor);
+    cube9.material.color = new Color(control.skinColor);
+    cube10.material.color = new Color(control.skinColor);
+    cube11.material.color = new Color(control.eyesColor);
+    cube12.material.color = new Color(control.eyesColor);
+    cube13.material.color = new Color(control.eyesColor);
     // render the scene
     renderer.render(scene, camera);
 }

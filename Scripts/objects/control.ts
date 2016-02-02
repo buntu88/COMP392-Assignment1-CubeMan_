@@ -7,14 +7,22 @@ module objects {
         public rotationSpeedx:number;
         public rotationSpeedy:number;
         public rotationSpeedz:number;
-        public color:number;
+        public skinColor:number;
+        public shirtColor:number;
+        public pantColor:number;
+        public bootColor:number;
+        public eyesColor:number;
         
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++
-        constructor(rotationSpeedx:number, rotationSpeedy:number, rotationSpeedz:number, color:number) {
+        constructor(rotationSpeedx:number, rotationSpeedy:number, rotationSpeedz:number, skinColor:number, shirtColor:number,pantColor:number, bootColor:number, eyesColor:number) {
            this.rotationSpeedx = rotationSpeedx;
            this.rotationSpeedy = rotationSpeedy;
            this.rotationSpeedz = rotationSpeedz;
-           this.color = color;
+           this.skinColor = skinColor;
+           this.shirtColor = shirtColor;
+           this.pantColor = pantColor;
+           this.bootColor = bootColor;
+           this.eyesColor = eyesColor;
         }
         
         //PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++
