@@ -1,3 +1,6 @@
-#COMP392-Lesson3-Demo
+#OMP392 - Assignment 1 - CubeMan
 
-COMP392-Lesson3-Demo for COMP392 - Advanced Graphics @ Centennial College
+COMP392 - Assignment 1 - CubeMan
+
+By: Vishal Guleria
+    300813391

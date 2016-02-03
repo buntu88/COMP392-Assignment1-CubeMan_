@@ -93,7 +93,7 @@ function init() {
     plane.rotation.x = -0.5 * Math.PI;
     scene.add(plane);
     console.log("Added Plane Primitive to scene...");
-    // //Add a Cube to the Scene
+    //Add a Shoes to the Scene
     cubeGeometry1 = new CubeGeometry(0.6, 0.3, 1.2);
     cubeMaterial1 = new LambertMaterial({ color: 0x000000, opacity: 1 });
     cube1 = new Mesh(cubeGeometry1, cubeMaterial1);
@@ -110,6 +110,7 @@ function init() {
     cube2.position.y = 0.15 - 3;
     cube2.position.z = 0.3;
     xyz.add(cube2);
+    //Add a Pants to the Scene
     cubeGeometry3 = new CubeGeometry(0.6, 2, 0.6);
     cubeMaterial3 = new LambertMaterial({ color: 0x4d3300, opacity: 1 });
     cube3 = new Mesh(cubeGeometry3, cubeMaterial3);
@@ -134,6 +135,7 @@ function init() {
     cube5.position.y = 2.45 - 3;
     cube5.position.z = 0.3;
     xyz.add(cube5);
+    //Add a Shirt to the Scene
     cubeGeometry6 = new CubeGeometry(2, 2, 1.2);
     cubeMaterial6 = new LambertMaterial({ color: 0x99ccff, opacity: 1 });
     cube6 = new Mesh(cubeGeometry6, cubeMaterial6);
@@ -158,6 +160,7 @@ function init() {
     cube8.position.y = 4.4 - 3;
     cube8.position.z = 0;
     xyz.add(cube8);
+    //Add a Neck to the Scene
     cubeGeometry9 = new CubeGeometry(0.6, 0.6, 0.6);
     cubeMaterial9 = new LambertMaterial({ color: 0xffcc99, opacity: 1 });
     cube9 = new Mesh(cubeGeometry9, cubeMaterial9);
@@ -166,6 +169,7 @@ function init() {
     cube9.position.y = 4.9 - 3;
     cube9.position.z = 0;
     xyz.add(cube9);
+    //Add a Head to the Scene
     cubeGeometry10 = new CubeGeometry(1.2, 1.2, 1.2);
     cubeMaterial10 = new LambertMaterial({ color: 0xffcc99, opacity: 1 });
     cube10 = new Mesh(cubeGeometry10, cubeMaterial10);
@@ -174,6 +178,7 @@ function init() {
     cube10.position.y = 5.8 - 3;
     cube10.position.z = 0.2;
     xyz.add(cube10);
+    //Add a Eyes to the Scene  
     cubeGeometry11 = new CubeGeometry(0.1, 0.1, 0.01);
     cubeMaterial11 = new LambertMaterial({ color: 0x000000, opacity: 1 });
     cube11 = new Mesh(cubeGeometry11, cubeMaterial11);
@@ -190,6 +195,7 @@ function init() {
     cube12.position.y = 6.1 - 3;
     cube12.position.z = 0.82;
     xyz.add(cube12);
+    //Add a Mouth to the Scene
     cubeGeometry13 = new CubeGeometry(0.3, 0.02, 0.01);
     cubeMaterial13 = new LambertMaterial({ color: 0x000000, opacity: 1 });
     cube13 = new Mesh(cubeGeometry13, cubeMaterial13);
