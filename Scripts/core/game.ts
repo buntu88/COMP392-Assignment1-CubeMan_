@@ -1,6 +1,11 @@
 /// <reference path="_reference.ts"/>
 
 // MAIN GAME FILE
+//Source file name      game.ts
+//Last Modified by      Vishal Guleria
+//Date last Modified    February 3,2016
+//Program description   COMP392 - Assignment 1 - CubeMan    
+//Revision History      v11
 
 // THREEJS Aliases
 import Scene = THREE.Scene;
@@ -82,7 +87,7 @@ var cubeMaterial12: LambertMaterial;
 var cube13: Mesh;
 var cubeGeometry13: CubeGeometry;
 var cubeMaterial13: LambertMaterial;
-var xyz = new Object3D;
+var cubeMan = new Object3D;
 
 function init() {
     // Instantiate a new Scene object
@@ -117,7 +122,7 @@ function init() {
     cube1.position.x = 0.5;
     cube1.position.y = 0.15 - 3;
     cube1.position.z = 0.3;
-    xyz.add(cube1);
+    cubeMan.add(cube1);
 
 
     cubeGeometry2 = new CubeGeometry(0.6, 0.3, 1.2);
@@ -127,7 +132,7 @@ function init() {
     cube2.position.x = -0.5;
     cube2.position.y = 0.15 - 3;
     cube2.position.z = 0.3;
-    xyz.add(cube2);
+    cubeMan.add(cube2);
 
     //Add a Pants to the Scene
     cubeGeometry3 = new CubeGeometry(0.6, 2, 0.6);
@@ -137,7 +142,7 @@ function init() {
     cube3.position.x = 0.5;
     cube3.position.y = 1.3 - 3;
     cube3.position.z = 0;
-    xyz.add(cube3);
+    cubeMan.add(cube3);
 
 
     cubeGeometry4 = new CubeGeometry(0.6, 2, 0.6);
@@ -147,7 +152,7 @@ function init() {
     cube4.position.x = -0.5;
     cube4.position.y = 1.3 - 3;
     cube4.position.z = 0;
-    xyz.add(cube4);
+    cubeMan.add(cube4);
 
 
     cubeGeometry5 = new CubeGeometry(2, 0.3, 1.2);
@@ -157,7 +162,7 @@ function init() {
     cube5.position.x = 0;
     cube5.position.y = 2.45 - 3;
     cube5.position.z = 0.3;
-    xyz.add(cube5);    
+    cubeMan.add(cube5);    
 
     
     //Add a Shirt to the Scene
@@ -168,7 +173,7 @@ function init() {
     cube6.position.x = 0;
     cube6.position.y = 3.6 - 3;
     cube6.position.z = 0.3;
-    xyz.add(cube6);
+    cubeMan.add(cube6);
 
 
     cubeGeometry7 = new CubeGeometry(1.5, 0.4, 0.4);
@@ -178,7 +183,7 @@ function init() {
     cube7.position.x = 1.75;
     cube7.position.y = 4.4 - 3;
     cube7.position.z = 0;
-    xyz.add(cube7);
+    cubeMan.add(cube7);
 
 
     cubeGeometry8 = new CubeGeometry(1.5, 0.4, 0.4);
@@ -188,7 +193,7 @@ function init() {
     cube8.position.x = -1.75;
     cube8.position.y = 4.4 - 3;
     cube8.position.z = 0;
-    xyz.add(cube8);  
+    cubeMan.add(cube8);  
     
     //Add a Neck to the Scene
     cubeGeometry9 = new CubeGeometry(0.6, 0.6, 0.6);
@@ -198,7 +203,7 @@ function init() {
     cube9.position.x = 0;
     cube9.position.y = 4.9 - 3;
     cube9.position.z = 0;
-    xyz.add(cube9); 
+    cubeMan.add(cube9); 
     
     //Add a Head to the Scene
     cubeGeometry10 = new CubeGeometry(1.2, 1.2, 1.2);
@@ -208,7 +213,7 @@ function init() {
     cube10.position.x = 0;
     cube10.position.y = 5.8 - 3;
     cube10.position.z = 0.2;
-    xyz.add(cube10); 
+    cubeMan.add(cube10); 
         
     //Add a Eyes to the Scene  
     cubeGeometry11 = new CubeGeometry(0.1, 0.1, 0.01);
@@ -218,7 +223,7 @@ function init() {
     cube11.position.x = 0.25;
     cube11.position.y = 6.1 - 3;
     cube11.position.z = 0.82;
-    xyz.add(cube11);
+    cubeMan.add(cube11);
 
     cubeGeometry12 = new CubeGeometry(0.1, 0.1, 0.01);
     cubeMaterial12 = new LambertMaterial({ color: 0x000000, opacity: 1 });
@@ -227,7 +232,7 @@ function init() {
     cube12.position.x = -0.25;
     cube12.position.y = 6.1 - 3;
     cube12.position.z = 0.82;
-    xyz.add(cube12); 
+    cubeMan.add(cube12); 
     
     //Add a Mouth to the Scene
     cubeGeometry13 = new CubeGeometry(0.3, 0.02, 0.01);
@@ -237,10 +242,10 @@ function init() {
     cube13.position.x = 0;
     cube13.position.y = 5.5 - 3;
     cube13.position.z = 0.82;
-    xyz.add(cube13);
+    cubeMan.add(cube13);
 
 
-    scene.add(xyz);
+    scene.add(cubeMan);
     console.log("Added Cube Primative to scene...");
 
     // Add an AmbientLight to the scene
@@ -251,7 +256,6 @@ function init() {
     // Add a SpotLight to the scene
     spotLight = new SpotLight(0xffffff);
     spotLight.position.set(40, 60 - 3, 40);
-    //spotLight.rotation.set(-0.71, -1.2,-0.44);
     spotLight.lookAt(new Vector3(0, 5.8 - 3, 0));
     spotLight.castShadow = true;
     scene.add(spotLight);
@@ -274,9 +278,7 @@ function init() {
 
 function onResize(): void {
     camera.aspect = CScreen.RATIO;
-    //camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    //renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setSize(CScreen.WIDTH, CScreen.HEIGHT);
 }
 
@@ -311,9 +313,9 @@ function gameLoop(): void {
     // render using requestAnimationFrame
     requestAnimationFrame(gameLoop);
 
-    xyz.rotation.x += control.rotationSpeedx;
-    xyz.rotation.y += control.rotationSpeedy;
-    xyz.rotation.z += control.rotationSpeedz;
+    cubeMan.rotation.x += control.rotationSpeedx;
+    cubeMan.rotation.y += control.rotationSpeedy;
+    cubeMan.rotation.z += control.rotationSpeedz;
     cube1.material.color = new Color(control.bootColor);
     cube2.material.color = new Color(control.bootColor);
     cube3.material.color = new Color(control.pantColor);
@@ -336,7 +338,6 @@ function setupRenderer(): void {
     renderer = new Renderer();
     renderer.setClearColor(0x555555, 1.0);
     renderer.setSize(CScreen.WIDTH, CScreen.HEIGHT);
-    //renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true;
     console.log("Finished setting up Renderer...");
 }
@@ -344,11 +345,9 @@ function setupRenderer(): void {
 // Setup main camera for the scene
 function setupCamera(): void {
     camera = new PerspectiveCamera(45, config.Screen.RATIO, 0.1, 1000);
-    //camera = new PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.x = 0;
     camera.position.y = 16 - 3;
     camera.position.z = 15;
-    //camera.position.z = 17.98061;
     camera.lookAt(new Vector3(0, 0 - 3, 0));
     console.log("Finished setting up Camera...");
 }
